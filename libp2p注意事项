@@ -1,1 +1,11 @@
-network.WithUseTransient(a.ctx, "chat")//这个Transient是瞬时连接的意思，不会被libp2p的连接管理器保持，当管理器需要关闭一些连接节省内存时，会优先关闭Transient连接。这种连接适合一次性的短期的通信任务。例如发送一个请求并接收一个反应，或者发送一个小的数据包。
+1.
+network.WithUseTransient(a.ctx, "chat")
+//这个Transient是瞬时连接的意思，不会被libp2p的连接管理器保持，当管理器需要关闭一些连接节省内存时，会优先关闭Transient连接。
+//这种连接适合一次性的短期的通信任务。例如发送一个请求并接收一个反应，或者发送一个小的数据包。
+
+2.
+Option relay.WithInfiniteLimits  
+//这个选项是中继节点解除limitation的选项，这样用`relay.New(localrelay, relay.WithInfiniteLimits())`
+
+
+
