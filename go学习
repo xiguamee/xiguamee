@@ -1,0 +1,1 @@
+1. go 用for循环读取channel数据在没有关闭channel之前会产生死锁，如果没有close，go会自动报错
