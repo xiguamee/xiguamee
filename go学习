@@ -3,7 +3,7 @@
    为什么对这3个类型特别指定一个make，因为map和chan必须进行初始化才能使用，如果map是nil则不能插入元素，如果chan是nil，往chan收发数据都会阻塞，
    slice是因为用make可以方便地，而不是因为nil
 
-
+3. copy会返回复制的数量
 
 
 
