@@ -1,5 +1,7 @@
 1. go 用for循环读取channel数据在没有关闭channel之前会产生死锁，如果没有close，go会自动报错
-2. new可以为任何类型分配内存，返回的是指针  make只能为slice、map、chan类型分配内存，返回的是原类型变量
+2. new可以为任何类型分配内存，不进行初始化，类型值都是nil，返回的是指针  make只能为slice、map、chan类型分配内存，并且同时进行初始化，返回的是原类型变量。
+   为什么对这3个类型特别指定一个make，因为map和chan必须进行初始化才能使用，如果map是nil则不能插入元素，如果chan是nil，往chan收发数据都会阻塞，
+   slice是因为用make可以方便地，而不是因为nil
 
 
 
